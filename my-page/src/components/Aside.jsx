@@ -4,11 +4,13 @@ import '../styles/aside.css';
 import {
     FcHome,
     FcAbout,
-    FcLinux,    
+    FcLinux,
+    FcMenu,    
 } from "react-icons/fc"
+import { BiLogoGmail, BiLogoGithub, BiLogoLinkedin } from "react-icons/bi";
 
 function Aside({ children }) {
-    const[expand, setExpand] = useState(false)
+    const[expand, setExpand] = useState(true)
     const button = () => setExpand(!expand);
 
     const menu = [
@@ -24,7 +26,7 @@ function Aside({ children }) {
         },
         {
             path: "/Repo",
-            text: "Projects",
+            text: "Projetos",
             icon: <FcLinux />
         }
     ];
@@ -32,15 +34,18 @@ function Aside({ children }) {
   return (
     <div className="container">
     <div style={{width: expand ? "200px" : "50px"}} className="container_sidebar">
-        <div className="container_section"
-             onClick={ button }   
-        >
-            <h1 style={{display: expand ? "block" : "none"}} 
-                className="initial_icon"
-                name="menu"                
-            >
+        <div className="container_section">            
+            <FcMenu 
+            onClick={ button }
+            id='menu_click'
+            />
+            <label style={{display: expand ? "block" : "none"}} 
+                className="initial_icon"                
+                htmlFor='menu_click'
+                onClick={ button }                                
+            >                
             Menu
-            </h1>
+            </label>
             <div style={{marginLeft: expand ? "40px" : "0px"}} className="container_bars" />                            
         </div>
         {
@@ -51,6 +56,14 @@ function Aside({ children }) {
                 </NavLink>
             ))
         }
+        <div>
+            <div className='aside__contact-container' style={{flexDirection: expand ? 'row' : 'column'}}>
+            <BiLogoGmail />
+            <BiLogoGithub />
+            <BiLogoLinkedin />
+            </div>
+
+        </div>
     </div>
     <main>{children}</main>
  </div>

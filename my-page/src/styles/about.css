@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@300&family=Outfit:wght@100&display=swap');
+
+.main__container-about{
+    display: flex;
+    flex-direction: column;
+}
+
+.about__profile-picture{
+    display: flex;
+    justify-content: center;
+    align-content: center;    
+}
+
+.about__profile {    
+    border-bottom: 1px solid black;
+    padding: 10px;
+    display: flex;
+}
+
+.about__profile p {
+    font-family: 'Outfit', sans-serif;
+    font-style: oblique;
+    font-size: 15px;
+    font-weight: bolder;
+    margin-left: 5px;
+    text-align: justify;    
+}
+
+.about__skills-container {
+    text-align: center;
+}
+
+.about__skills-list {
+    display: flex;
+    justify-content: space-evenly; 
+}
+
+.front_button,
+.back_button,
+.other_button {
+    background-color: #A3D8CD;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px; 
+}
+
+.front_button:hover,
+.back_button:hover,
+.other_button:hover {
+    background-color: #faf9f9;
+}
+
+
+
+

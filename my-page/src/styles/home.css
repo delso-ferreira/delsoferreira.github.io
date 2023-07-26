@@ -1,12 +1,27 @@
-* {
-    box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@300&family=Outfit:wght@100&display=swap');
+
+.main__home-container {
+    display: flex;   
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
 }
 
-body {
-    margin: 0;
-    background-image: url(../images/pattern.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    min-height: 100vh;    
+.main_title {
+    color: black;
+    font-family: 'Outfit', sans-serif;
+    font-size: 50px;
+}
+
+.home__info {
+    display: flex;    
+    justify-content: left;
+    border-left: 2px solid black;
+    border-bottom: 1px solid black;
+}
+
+.home__about {
+    color: black;
+    margin-left: 6px;
+    width: 600px;
 }

@@ -4,19 +4,20 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Repo from './pages/Repo';
 import Aside from './components/Aside';
-
+import './styles/app.css';
 const App = () => {
   return (
-    <BrowserRouter>
-      <Aside>
-        <Routes>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/About" component={About} />
-          <Route exact path="/Repo" component={Repo} />
-        </Routes>
-      </Aside>
+    <BrowserRouter>        
+      <Aside>        
+        <Routes>                
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/About" element={<About />} />
+          <Route exact path="/Repo" element={<Repo />} />        
+        </Routes>        
+      </Aside>        
     </BrowserRouter>
   );
 };
+
 
 export default App;
