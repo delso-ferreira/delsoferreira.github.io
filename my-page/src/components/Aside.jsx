@@ -10,7 +10,7 @@ import {
 import { BiLogoGmail, BiLogoGithub, BiLogoLinkedin } from "react-icons/bi";
 
 function Aside({ children }) {
-    const[expand, setExpand] = useState(true)
+    const[expand, setExpand] = useState(false)
     const button = () => setExpand(!expand);
 
     const menu = [
@@ -39,13 +39,14 @@ function Aside({ children }) {
             onClick={ button }
             id='menu_click'
             />
+            <div>
             <label style={{display: expand ? "block" : "none"}} 
                 className="initial_icon"                
                 htmlFor='menu_click'
                 onClick={ button }                                
-            >                
-            Menu
+            >                            
             </label>
+            </div>
             <div style={{marginLeft: expand ? "40px" : "0px"}} className="container_bars" />                            
         </div>
         {
