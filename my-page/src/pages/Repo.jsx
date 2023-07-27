@@ -20,7 +20,7 @@ function Repo() {
     <div className='repo__container'>
       <div className='repo__container-title'>
       <h1>
-          Repositórios Git-Hub
+          Projetos Desenvolvidos
         </h1>
         </div>
       <div className='repo__inner-container'>        

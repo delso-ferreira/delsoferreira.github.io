@@ -63,6 +63,13 @@ main{
     flex-direction: column;    
     margin-left: 16px;
     margin-top: 50px;
-    gap: 20px;
+    gap: 20px;   
+}
 
+.aside__contact-container a{
+    color: #ffffff;    
+}
+
+.aside__contact-container a :hover{
+    color: #A3D8CD;
 }

@@ -59,9 +59,15 @@ function Aside({ children }) {
         }
         <div>
             <div className='aside__contact-container' style={{flexDirection: expand ? 'row' : 'column'}}>
+            <a href='mailto:delsofelipe@gmail.com'>
             <BiLogoGmail />
+            </a>
+            <a href='https://github.com/delso-ferreira'>
             <BiLogoGithub />
+            </a>
+            <a href='https://www.linkedin.com/in/delsoferreira/'>
             <BiLogoLinkedin />
+            </a>
             </div>
 
         </div>
