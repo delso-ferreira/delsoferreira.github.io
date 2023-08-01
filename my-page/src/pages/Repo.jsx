@@ -20,7 +20,7 @@ function Repo() {
     <div className='repo__container'>
       <div className='repo__container-title'>
       <h1>
-          Projetos Desenvolvidos
+          Principais Projetos
         </h1>
         </div>
       <div className='repo__inner-container'>        
@@ -69,15 +69,16 @@ function Repo() {
           onMouseEnter={() => handleMouseEnter(3)}
           onMouseLeave={() => handleMouseLeave(3)}
         >
-        <a href='https://github.com/delso-ferreira/music-app'>
-          Music App &#x1F50A;
+        <a href='https://github.com/delso-ferreira/currency-converter'>
+          Currency Converter &#36;
         </a>
         </h3>        
         {hoverStates[3] && <p style={{
           maxWidth: '50vh', 
           textAlign: 'justify'
-        }}>Desenvolvimento de player de músicas em React
+        }}>Conversor de moedas para real
           </p>}
+          
       </div>
     </div>
   );
