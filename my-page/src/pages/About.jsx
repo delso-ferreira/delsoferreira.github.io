@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import '../styles/about.css';
 
 function About() { 
@@ -16,6 +16,8 @@ function About() {
           <br></br>Quando não estou trabalhando em algum projeto ou estudando, geralmente estou junto com meus amigos jogando Role Playing Games,
           tentando tocar alguma música na bateria ou brincando com meu gato Fred.
         </p>
+      </div>
+      <div className="about__skills">      
       </div>
     </div>
   )

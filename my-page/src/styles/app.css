@@ -6,8 +6,17 @@
 
 body {
     margin: 0;
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgb(43, 39, 117) 0%, rgba(234,233,235,1) 43%, rgba(115,151,158,1) 96%);       
+    background: rgb(44, 44, 46);    
     background-size: cover;
     min-height: 100vh;    
 }
+
+@media screen and (max-width: 600px) {
+    .container {
+      flex-direction: column; /* Stack the aside and main content vertically */
+    }
+  
+    main {
+      margin-top: 50px; /* Add margin to the top of main content for mobile screens */
+    }
+  }

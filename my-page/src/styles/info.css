@@ -1,0 +1,27 @@
+.info__container {
+    display: flex;
+    justify-content: center;
+    animation: fadeIn 2.5s ease-in;
+}
+
+.info__picture {
+    margin-left: 45px;    
+    border-radius: 40px;
+    width: 70px;
+    
+}
+
+.info__container-city {
+    margin: 18px;    
+}
+
+@keyframes fadeIn {
+    0% {
+     opacity: 0;
+     transform: translateY(0);
+    } 
+    100% {
+     opacity: 1;
+     transform: translateY(0);
+    }
+}

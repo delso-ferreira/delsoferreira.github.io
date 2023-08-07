@@ -22,8 +22,12 @@ main{
     display: flex;
     align-items:center;
     justify-content:flex-start;
-    padding:35px 15px;
+    padding:35px 15px;    
 }   
+
+.aside__menu-click {
+    cursor: pointer;
+}
 
 .initial_icon{
     font-size: 35px;    
@@ -72,9 +76,4 @@ main{
 
 .aside__contact-container a :hover{
     color: #A3D8CD;
-}
-
-
-@media screen and (max-width: 320px)  {
-
 }

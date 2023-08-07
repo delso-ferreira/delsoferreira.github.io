@@ -8,10 +8,12 @@ import {
     FcMenu,    
 } from "react-icons/fc"
 import { BiLogoGmail, BiLogoGithub, BiLogoLinkedin } from "react-icons/bi";
+import Info from './Info';
 
 function Aside({ children }) {
-    const[expand, setExpand] = useState(false)
+    const[expand, setExpand] = useState(false)    
     const button = () => setExpand(!expand);
+  
 
     const menu = [
         {
@@ -33,11 +35,12 @@ function Aside({ children }) {
 
   return (
     <div className="container">
-    <div style={{width: expand ? "200px" : "50px"}} className="container_sidebar">
+    <div style={{width: expand ? "200px" : "50px"}} className="container_sidebar">        
         <div className="container_section">            
             <FcMenu 
             onClick={ button }
             id='menu_click'
+            className="aside__menu-click"
             />
             <div>
             <label style={{display: expand ? "block" : "none"}} 
@@ -49,6 +52,7 @@ function Aside({ children }) {
             </div>
             <div style={{marginLeft: expand ? "40px" : "0px"}} className="container_bars" />                            
         </div>
+        {expand && <Info />}
         {
             menu.map((item, index)=>(
                 <NavLink to={item.path} key={index} className="link" activeclassName="active">

@@ -10,7 +10,7 @@
 }
 
 .main_title {
-    color: black;
+    color: white;
     font-family: 'Outfit', sans-serif;
     font-size: 50px;
 }
@@ -18,12 +18,12 @@
 .home__info {
     display: flex;    
     justify-content: left;
-    border-left: 2px solid black;
-    border-bottom: 1px solid black;
+    border-left: 2px solid whitesmoke;
+    border-bottom: 1px solid whitesmoke;
 }
 
 .home__about {
-    color: black;
+    color: whitesmoke;
     margin-left: 6px;
     width: 600px;
 }

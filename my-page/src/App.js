@@ -5,6 +5,7 @@ import About from './pages/About';
 import Repo from './pages/Repo';
 import Aside from './components/Aside';
 import './styles/app.css';
+
 const App = () => {
   return (
     <BrowserRouter>        
