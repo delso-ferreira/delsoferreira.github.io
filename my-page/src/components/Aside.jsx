@@ -63,13 +63,13 @@ function Aside({ children }) {
         }
         <div>
             <div className='aside__contact-container' style={{flexDirection: expand ? 'row' : 'column'}}>
-            <a href='mailto:delsofelipe@gmail.com'>
+            <a href='mailto:delsofelipe@gmail.com' target='_blank' rel='noreferrer'>
             <BiLogoGmail />
             </a>
-            <a href='https://github.com/delso-ferreira'>
+            <a href='https://github.com/delso-ferreira' target='_blank' rel='noreferrer'>
             <BiLogoGithub />
             </a>
-            <a href='https://www.linkedin.com/in/delsoferreira/'>
+            <a href='https://www.linkedin.com/in/delsoferreira/' target='_blank' rel='noreferrer'>
             <BiLogoLinkedin />
             </a>
             </div>

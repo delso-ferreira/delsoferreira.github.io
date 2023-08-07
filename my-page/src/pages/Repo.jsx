@@ -28,7 +28,7 @@ function Repo() {
           onMouseEnter={() => handleMouseEnter(0)}
           onMouseLeave={() => handleMouseLeave(0)}
         >
-        <a href='https://github.com/delso-ferreira/multi-filters-star-wars'>
+        <a href='https://github.com/delso-ferreira/multi-filters-star-wars' target='_blank' rel='noreferrer'>
           Star Wars Planet Filter &#x1F680;
         </a>
         </h3>
@@ -43,7 +43,7 @@ function Repo() {
           onMouseEnter={() => handleMouseEnter(1)}
           onMouseLeave={() => handleMouseLeave(1)}
         >
-        <a href='https://github.com/delso-ferreira/RTL-Unit-Tests'>
+        <a href='https://github.com/delso-ferreira/RTL-Unit-Tests' target='_blank' rel='noreferrer'>
          RTL Test &#x1F52C;  
         </a>       
         </h3>
@@ -56,7 +56,7 @@ function Repo() {
           onMouseEnter={() => handleMouseEnter(2)}
           onMouseLeave={() => handleMouseLeave(2)}
         >
-        <a href='https://github.com/delso-ferreira/shopping-cart'>
+        <a href='https://github.com/delso-ferreira/shopping-cart' target='_blank' rel='noreferrer'>
           Shopping Cart &#x1F4B3;
         </a>  
         </h3>
@@ -69,7 +69,7 @@ function Repo() {
           onMouseEnter={() => handleMouseEnter(3)}
           onMouseLeave={() => handleMouseLeave(3)}
         >
-        <a href='https://github.com/delso-ferreira/currency-converter'>
+        <a href='https://github.com/delso-ferreira/currency-converter' target='_blank' rel='noreferrer'>
           Currency Converter &#36;
         </a>
         </h3>        
