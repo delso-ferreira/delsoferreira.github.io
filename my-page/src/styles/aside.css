@@ -12,7 +12,7 @@ main{
 .container_sidebar {
     background: #3b3a3a;
     color: #f7f4f4;
-    height: 100vh;
+    height:140vh;
     width: 200px;
     transition: all 0.5s;    
 

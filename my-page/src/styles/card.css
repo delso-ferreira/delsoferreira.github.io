@@ -6,19 +6,21 @@
     border-radius: 8px;    
     padding: 10px;
     color: black;
-    transition: transform 0.5s;  
+    transition: transform 0.5s; 
+    text-decoration: none;
       
 }
 
 .container__card-descr h3 {
     color: black;
-    font-size: 15px;
+    font-size: 16px;
     text-align: center;    
     
 }
 
 .container__card-descr p {
-    color: black;    
+    color: black;
+    font-size: 13px;        
 }
 
 .container__card:hover {
