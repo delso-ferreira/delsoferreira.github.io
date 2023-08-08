@@ -14,8 +14,7 @@ main{
     color: #f7f4f4;
     height:140vh;
     width: 200px;
-    transition: all 0.5s;    
-
+    transition: all 0.5s;   
 }
 
 .container_section {

@@ -9,8 +9,8 @@ function Repo() {
   useEffect(() => {
     const getRepos = async () => {
       const response = await fetch('https://api.github.com/users/delso-ferreira/repos')
-      const data = await response.json()
-      setrepos(data)
+      const data = await response.json()      
+        return setrepos(data)      
     }
     getRepos()
   }, [])
@@ -22,7 +22,7 @@ function Repo() {
         repos.length > 0 ? (
           <div className='card-container'>
             {
-              repos.map((repo) => (
+              repos.filter(repo => repo.name !== 'delso-ferreira' && repo.name !== 'delsoferreira.github.io').map((repo) => (
                 <Card
                   className="repo-infos"
                   key={repo.id}
