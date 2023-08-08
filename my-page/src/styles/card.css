@@ -1,0 +1,28 @@
+.container__card {
+    width: 180px;
+    height: 130px;    
+    background-color: whitesmoke;
+    border: 1px solid black;
+    border-radius: 8px;    
+    padding: 10px;
+    color: black;
+    transition: transform 0.5s;  
+      
+}
+
+.container__card-descr h3 {
+    color: black;
+    font-size: 15px;
+    text-align: center;    
+    
+}
+
+.container__card-descr p {
+    color: black;    
+}
+
+.container__card:hover {
+    background-color: #A3D8CD;
+    transform: scale(1.05);
+}
+

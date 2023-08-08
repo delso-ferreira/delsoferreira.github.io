@@ -2,6 +2,7 @@
 
 .main__container-about{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;    
     color: whitesmoke;
@@ -28,8 +29,7 @@
 
 .about__skills {
     display: flex;
-    flex-direction: column;
-    margin:50px
+    margin-top: 20px;        
 }
 
 @keyframes fadeIn {

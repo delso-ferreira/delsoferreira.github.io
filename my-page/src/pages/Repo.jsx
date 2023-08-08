@@ -1,87 +1,44 @@
-import React, { useState } from 'react';
-import '../styles/repo.css';
+import React, { useEffect, useState } from 'react';
+import Loading from '../components/Spinner';
+import Card from '../components/Card';
+import '../styles/projects.css';
 
 function Repo() {
-  const [hoverStates, setHoverStates] = useState([false, false, false, false]);
+  const [repos, setrepos] = useState([])
 
-  const handleMouseEnter = (index) => {
-    const updatedHoverStates = [...hoverStates];
-    updatedHoverStates[index] = true;
-    setHoverStates(updatedHoverStates);
-  };
-
-  const handleMouseLeave = (index) => {
-    const updatedHoverStates = [...hoverStates];
-    updatedHoverStates[index] = false;
-    setHoverStates(updatedHoverStates);
-  };
+  useEffect(() => {
+    const getRepos = async () => {
+      const response = await fetch('https://api.github.com/users/delso-ferreira/repos')
+      const data = await response.json()
+      setrepos(data)
+    }
+    getRepos()
+  }, [])
 
   return (
-    <div className='repo__container'>
-      <div className='repo__container-title'>
-      <h1>
-          Principais Projetos
-        </h1>
-        </div>
-      <div className='repo__inner-container'>        
-        <h3
-          onMouseEnter={() => handleMouseEnter(0)}
-          onMouseLeave={() => handleMouseLeave(0)}
-        >
-        <a href='https://github.com/delso-ferreira/multi-filters-star-wars' target='_blank' rel='noreferrer'>
-          Star Wars Planet Filter &#x1F680;
-        </a>
-        </h3>
-        {hoverStates[0] && <p style={{
-          maxWidth: '50vh', 
-          textAlign: 'justify'          
-        }}>Projeto utilizando uma API de planetas 
-          de Star Wars para realização de múltiplos filtros de pesquisa
-          </p>}
-        
-        <h3
-          onMouseEnter={() => handleMouseEnter(1)}
-          onMouseLeave={() => handleMouseLeave(1)}
-        >
-        <a href='https://github.com/delso-ferreira/RTL-Unit-Tests' target='_blank' rel='noreferrer'>
-         RTL Test &#x1F52C;  
-        </a>       
-        </h3>
-        {hoverStates[1] && <p style={{
-          maxWidth: '50vh', 
-          textAlign: 'justify'
-        }}>Testes unitários utilizando a biblioteca React Testing Library          
-          </p>}        
-        <h3
-          onMouseEnter={() => handleMouseEnter(2)}
-          onMouseLeave={() => handleMouseLeave(2)}
-        >
-        <a href='https://github.com/delso-ferreira/shopping-cart' target='_blank' rel='noreferrer'>
-          Shopping Cart &#x1F4B3;
-        </a>  
-        </h3>
-        {hoverStates[2] && <p style={{
-          maxWidth: '50vh', 
-          textAlign: 'justify' 
-        }}>Funcionalidades de um carrinho de compras para um E-Commerce
-          </p>}
-        <h3
-          onMouseEnter={() => handleMouseEnter(3)}
-          onMouseLeave={() => handleMouseLeave(3)}
-        >
-        <a href='https://github.com/delso-ferreira/currency-converter' target='_blank' rel='noreferrer'>
-          Currency Converter &#36;
-        </a>
-        </h3>        
-        {hoverStates[3] && <p style={{
-          maxWidth: '50vh', 
-          textAlign: 'justify'
-        }}>Conversor de moedas para real
-          </p>}
-          
-      </div>
-    </div>
-  );
+    <section className='projects'>
+      <h2 className="projects-header">Projetos</h2>
+      {
+        repos.length > 0 ? (
+          <div className='card-container'>
+            {
+              repos.map((repo) => (
+                <Card
+                  className="repo-infos"
+                  key={repo.id}
+                  name={repo.name}
+                  description={repo.description}
+                  html_url={repo.html_url}
+                />
+              ))
+            }
+          </div>
+        ) : (
+          <Loading />
+        )
+      }
+    </section>
+  )
 }
 
 export default Repo;

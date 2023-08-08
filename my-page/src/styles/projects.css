@@ -1,0 +1,27 @@
+.projects {
+    text-align: center;
+    animation: fadeIn 0.7s ease-in-out;
+}
+
+.projects-header{
+    color: white;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 1.5rem;
+    margin-block: 1rem;
+    justify-items: center;
+}
+
+@keyframes fadeIn {
+    0% {
+     opacity: 0;
+     transform: translateY(20px);
+    } 
+    100% {
+     opacity: 1;
+     transform: translateY(0);
+    }
+}
