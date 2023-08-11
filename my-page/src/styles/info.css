@@ -1,27 +1,72 @@
-.info__container {
-    display: flex;
-    justify-content: center;
-    animation: fadeIn 2.5s ease-in;
-}
+@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
 
-.info__picture {
-    margin-left: 45px;    
-    border-radius: 40px;
-    width: 70px;
+
+.skills_list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 15px;
     
+  }
+
+.neon_button {
+    color: var(--neon-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+    font-family: 'Outfit', sans-serif;    
+    border: none;
+    padding: 0.25em;
+    border-radius: 0.22em;
+    text-align: center;
+    text-shadow: 0 0 1.25em hsla(313, 79%, 42%, 0.5), var(--neon-color) 0 0 1.25em;
+    box-shadow: inset 0 0 0.5em 0 var(--neon-color), 0 0 0.5em 0 var(--neon-color);
+    position: relative;
+    transition: opacity 100ms linear;
+    margin: 10px;  
+
+
 }
 
-.info__container-city {
-    margin: 18px;    
+.neon_button::before {
+    pointer-events: none;
+    content: '';
+    position: absolute;
+    background: var(--neon-color);
+    top: 120%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: perspective(1em) rotateX(25deg) scale(0.55, 0.25);
+    filter: blur(2em);
+    opacity: 0.7;
 }
 
-@keyframes fadeIn {
-    0% {
-     opacity: 0;
-     transform: translateY(0);
-    } 
-    100% {
-     opacity: 1;
-     transform: translateY(0);
-    }
+.neon_button:hover, .neon_button:focus {
+    background: var(--neon-color);
+    color: var(--neon-bg);
+    text-shadow: none;
 }
+
+.neon_button:after {
+    content: '';
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 100%;    
+    box-shadow: 0 2em 0.8em var(--neon-color);
+    opacity: 0;
+    transition: opacity 100ms linear;
+}
+
+.neon_button:hover::before,
+.neon_button:focus::before
+{
+    opacity: 1;
+}
+
+.neon_button:hover::after,
+.neon_button:focus::after
+{    
+    opacity: 1;
+}
+

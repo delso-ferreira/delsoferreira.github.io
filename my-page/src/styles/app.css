@@ -3,12 +3,99 @@
     padding: 0;
 }
 
+:root {
+  --neon-color: hsl(271, 59%, 73%);  
+  --neon-bg: hsl(315, 57%, 13%);
+
+  --neon-js:hsl(42, 91%, 50%);
+  --neon-html: hsl(0, 100%, 50%);
+  --neon-css: hsl(210, 100%, 50%);
+  --neon-react: hsl(192, 68%, 53%);
+  --neon-redux: hsl(240, 100%, 50%);
+  --neon-vite:hsl(0, 0%, 70%);
+  --neon-jest: hsl(144, 61%, 50%);
+  --neon-rtl: hsl(0, 55%, 60%);
+  --neon-docker: hsl(220, 100%, 50%);
+  --neon-mysql: hsl(245, 58%, 30%);
+  --neon-node: hsl(156, 65%, 50%);
+  --neon-git: hsl(0, 0%, 50%);
+  --neon-aws: hsl(210, 67%, 51%);
+
+  
+}
+
+.neon-javascript {
+  background-color: var(--neon-js);
+  color: black;  
+}
+
+.neon-html5 {
+  background-color: var(--neon-html);
+  color: black;
+}
+
+.neon-css {
+  background-color:  var(--neon-css);
+  color: black;
+}
+
+.neon-react {
+  background-color: var(--neon-react);
+  color: black;
+}
+
+.neon-redux{
+  background-color: var(--neon-redux);
+  color: black;
+}
+
+.neon-vite{
+  background-color: var(--neon-vite);
+  color: black;
+}
+
+.neon-jest{
+  background-color: var(--neon-jest);
+  color: black;
+}
+
+.neon-rtl{
+  background-color: var(--neon-rtl);
+  color: black;
+}
+
+.neon-docker{
+  background-color: var(--neon-docker);
+  color: black;
+}
+
+.neon-mysql{
+  background-color: var(--neon-mysql);
+  color: black;
+}
+
+.neon-node{
+  background-color: var(--neon-node);
+  color: black;
+}
+
+.neon-git{
+  background-color: var(--neon-git);
+  color: black;
+}
+
+.neon-aws{
+  background-color: var(--neon-aws);
+  color: black;
+}
 
 body {
     margin: 0;
     background: rgb(44, 44, 46);    
     background-size: cover;
     min-height: 100vh;    
+    position: relative;
+    z-index: 1;
 }
 
 @media screen and (max-width: 600px) {

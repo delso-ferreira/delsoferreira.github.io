@@ -1,32 +1,71 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@300&family=Outfit:wght@100&display=swap');
-
-.main__home-container {
-    display: flex;   
+.main__container {
+    display: flex;
     flex-direction: column;
+    text-align: center;
     justify-content: center;
-    align-items: center;   
+    height: 70vh;
     animation: fadeIn 0.7s ease-in-out;
-     
-}
+  }
+  
+  .text__animation p span {
+    display: inline-block;
+    overflow: hidden;
+    animation: typing-animation 4s steps(40) 1s infinite alternate, cursor-animation 1s infinite;
+  }
 
-.main_title {
-    color: white;
-    font-family: 'Outfit', sans-serif;
-    font-size: 50px;
-}
+  .main__h1-container {
+    color: rgb(158, 158, 173);
+    font-size: 3em;
+    position: relative;
+    perspective: 1000px;
+  }
+  
+  .main__h1 {
+    transform-style: preserve-3d;
+    animation: jump-animation 2s infinite ease-in-out;    
+  }
 
-.home__info {
-    display: flex;    
-    justify-content: left;
-    border-left: 2px solid whitesmoke;
-    border-bottom: 1px solid whitesmoke;
-}
-
-.home__about {
+  .main__container-animation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5em;
+  }
+    
+ .main__container-animation  h3 {
     color: whitesmoke;
-    margin-left: 6px;
-    width: 600px;
-}
+  }
+  @keyframes jump-animation {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px) translateZ(20px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+
+  @keyframes typing-animation {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+
+  @keyframes cursor-animation {
+    from {
+      border-right: 2px solid #000;
+    }
+    to {
+      border-right: 2px solid transparent;
+    }
+  }
+
 
 @keyframes fadeIn {
     0% {

@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import Loading from '../components/Spinner';
+import Loading from '../components/Loading';
 import Card from '../components/Card';
 import '../styles/projects.css';
-
 function Repo() {
   const [repos, setrepos] = useState([])
 
@@ -17,7 +16,7 @@ function Repo() {
 
   return (
     <section className='projects'>
-      <h2 className="projects-header">Projetos</h2>
+      <h2 className="projects-header">Projects</h2>
       {
         repos.length > 0 ? (
           <div className='card-container'>

@@ -8,7 +8,6 @@ import {
     FcMenu,    
 } from "react-icons/fc"
 import { BiLogoGmail, BiLogoGithub, BiLogoLinkedin } from "react-icons/bi";
-import Info from './Info';
 
 function Aside({ children }) {
     const[expand, setExpand] = useState(false)    
@@ -22,13 +21,13 @@ function Aside({ children }) {
             icon: <FcHome />
         },
         {
-            path: "/About",
-            text: "About",
+            path: "/Skills",
+            text: "Skills",
             icon: <FcAbout />
         },
         {
             path: "/Repo",
-            text: "Projetos",
+            text: "Projects",
             icon: <FcLinux />
         }
     ];
@@ -51,8 +50,7 @@ function Aside({ children }) {
             </label>
             </div>
             <div style={{marginLeft: expand ? "40px" : "0px"}} className="container_bars" />                            
-        </div>
-        {expand && <Info />}
+        </div>        
         {
             menu.map((item, index)=>(
                 <NavLink to={item.path} key={index} className="link" activeclassName="active">

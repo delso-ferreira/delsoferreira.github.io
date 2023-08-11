@@ -53,7 +53,7 @@ main{
     transition: all 0.10s;
 }
 .active{
-    background: #A3D8CD;
+    background: var(--neon-color);
     color: #000;
 }
 

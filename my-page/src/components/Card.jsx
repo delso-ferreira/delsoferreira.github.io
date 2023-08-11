@@ -1,7 +1,6 @@
 import React from 'react';
 import '../styles/card.css';
 
-// eslint-disable-next-line react/prop-types
 function Card({ name, description, html_url }) {
     return (
         <a
