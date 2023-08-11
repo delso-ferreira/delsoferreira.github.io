@@ -16,6 +16,10 @@ function Home() {
       color: "var(--neon-jest)"
     },
     {
+      text: "RPG Geek",
+      color: "var(--neon-aws)"
+    },
+    {
       text: "Good Friend",
       color: "var(--neon-js)" 
     }
@@ -29,7 +33,7 @@ function Home() {
     }, 4000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [texts.length]);
 
   return (
     <div className='main__container'>

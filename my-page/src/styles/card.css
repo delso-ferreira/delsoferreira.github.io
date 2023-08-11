@@ -12,18 +12,16 @@
     position: relative;
 }
 
-  .container__card-descr h3 {
+.container__card-descr h3 {
     color: black;
     font-size: 16px;
     text-align: center;    
-    
 }
 
 .container__card-descr p {
     color: black;
     font-size: 13px;        
 }
-
 
 .container__card::before {
     content: '';
@@ -33,8 +31,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    transform: perspective(0.8em) rotateX(25deg) scale(0.55, 0.25)
-    
+    transform: perspective(0.8em) rotateX(25deg) scale(0.55, 0.25);
 }
 
 .container__card {
@@ -49,11 +46,12 @@
     text-shadow: 0 0 1.25em hsla(313, 79%, 42%, 0.5), var(--neon-color) 0 0 1.25em;
     box-shadow: inset 0 0 0.5em 0 var(--neon-color), 0 0 0.5em 0 var(--neon-color);
     position: relative;
-    transition: opacity 0.5s;
+    transition: opacity 0.5s, transform 0.3s; /* Add transform transition */
     margin: 10px;
-  }
-  
-  .container__card:before {
+    transform: scale(1); /* Set initial scale to 1 */
+}
+
+.container__card:before {
     content: "";
     position: absolute;
     top: 80%; 
@@ -65,9 +63,9 @@
     filter: blur(2em);
     opacity: 0.7;
     pointer-events: none;
-  }
+}
 
-  .container__card:after {
+.container__card:after {
     content: '';
     position: absolute;
     top: 0%;
@@ -76,20 +74,21 @@
     height: 100%;    
     box-shadow: 0 2em 0.8em var(--neon-color);
     opacity: 0;
-    transition: opacity 100ms linear;
+    transition: opacity 100ms linear;    
 }
-  
-  .container__card:hover,
-  .container__card:focus {
+
+.container__card:hover,
+.container__card:focus {
     opacity: 0.7;
-  }
-  
-  .container__card:hover::before,
-  .container__card:focus::before {
+    transform: scale(1.1); 
+}
+
+.container__card:hover::before,
+.container__card:focus::before {
     opacity: 1;
-  }
-  
-  .container__card:hover::after,
-  .container__card:focus::after {
+}
+
+.container__card:hover::after,
+.container__card:focus::after {
     opacity: 1;
-  }
+}
