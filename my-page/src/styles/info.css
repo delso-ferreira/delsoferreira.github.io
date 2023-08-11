@@ -44,6 +44,7 @@
     background: var(--neon-color);
     color: var(--neon-bg);
     text-shadow: none;
+    transform: scale(1.1);
 }
 
 .neon_button:after {

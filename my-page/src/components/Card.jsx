@@ -10,7 +10,9 @@ function Card({ name, description, html_url }) {
             rel="noopener noreferrer">
             <section className="container__card-descr">
                 <h3>{name}</h3>
-                <p>{description}</p>
+                <p>
+                {description}
+                </p>
             </section>
         </a>
     );
