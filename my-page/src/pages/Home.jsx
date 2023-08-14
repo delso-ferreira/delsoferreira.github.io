@@ -41,7 +41,7 @@ function Home() {
         <h1 className='main__h1'>Hello, I'm Delso</h1>
       </div>
       <div className="main__container-animation">        
-          <h3>I'm a...</h3>          
+          <h3 style={{ margin: '20px'}}>I'm a...</h3>          
         <div className='text__animation'>          
           <p style={{ color: texts[currentIndex].color }}>{texts[currentIndex].text}</p>
         </div>
